@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'poppins',sans-serif;
+}
+
+
+/* ------------------------- Nav Bar -------------------------------- */
+.bi {
+    display: none;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000000;
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin: 25px 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.02rem;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    color:#138808;
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 999;
+    display: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul  li {
+    width: 150px;
+    padding: 0;
+    margin: 10px;
+    text-align: start;
+}
+
+nav ul li ul li a {
+    font-size: 1rem;
+}
+
+
+/*------------------------ Responsive navbar------------------ */
+
+@media only screen and (max-width:769px){
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255,255,255,1);
+        position: fixed;
+        top: 0;
+        right: -300px;   
+        z-index: 9999;
+        width: 300px;
+        height: 890px;
+        transition: 0.3s;
+    }
+    nav ul li {      
+        text-align: center;
+    }
+    .bi {
+        display: block;
+        text-align: right;
+        font-size: 32px;
+        margin: 10px;
+    }
+
+    nav ul li ul {
+        background-color: white;
+        z-index: 1015;
+        margin-top: 33px;
+    }
+}
+
+
+#banner {
+    background-image: url('./gardening&landscaping/garden-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 290px;
+}
+
+#banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 700;
+}
+
+#content {
+    margin-top: 150px ;
+}
+
+
+#content section {
+    margin-top: 100px;
+}
+
+#content img {
+    max-width: 100%;
+}
+#content h2 {
+    font-size: 75px;
+    font-weight: 900;
+    font-family: 'poppins-bold';
+    margin-bottom: 20px;
+}
+
+#content  p{
+    text-align: justify;
+    font-size: 19px;
+}
+
+#content ul {
+    font-size: 19px;
+}
+
+#content ul li {
+    margin-top: 30px;
+}
+
+#content .a-div {
+    margin-top: 50px;
+    width: 100%;
+
+}
+
+#content a {
+    padding: 10px 30px;
+    border: 1px solid grey;
+    background-color: white;
+    transition: 0.3s;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+#content a:hover {
+    background-color: #cae06b;
+}
+
+
+
+@media only screen and (max-width:550px){
+
+    #content {
+        margin-top: 0px ;
+    }
+
+    #content p {
+        font-size: 12px;
+    }
+    #content ul {
+        font-size: 14px;
+    }
+}
